@@ -1,2 +1,1 @@
-# DieseEineSchulApp
-### Wir brauchen einen Namen :(
+# AdamApp
