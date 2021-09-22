@@ -1,3 +1,4 @@
 WebUntis Api: 
 https://webuntis.noim.me/WebUntis.html
 https://github.com/SchoolUtils/WebUntis
+https://opensourcelibs.com/lib/webuntis
