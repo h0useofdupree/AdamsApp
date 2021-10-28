@@ -1,20 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Folder from '@/views/Folder.vue'
+import Home from '@/views/Home.vue'
 
-describe('Folder.vue', () => {
-  it('renders folder view', () => {
-    const mockRoute = {
-      params: {
-        id: 'Outbox'
-      }
-    }
-    const wrapper = mount(Folder, {
-      global: {
-        mocks: {
-          $route: mockRoute
-        }
-      }
-    })
-    expect(wrapper.text()).toMatch('Explore UI Components')
+describe('Home.vue', () => {
+  it('renders home vue', () => {
+    const wrapper = mount(Home)
+    expect(wrapper.text()).toMatch('Ready to create an app?')
   })
 })
