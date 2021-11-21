@@ -12,4 +12,4 @@ Die App soll dabei helfen, den Schulalltag leichter zu managen. Dies wird ermög
 - Optional: Gruppenchats mit Klassenkameraden, in der Nachrichten und Dateien geteilt werden können
 - Live-Vertretungsplan mit Benachrichtigungsfunktion
 
-Das Ziel ist, dass Schüler durch die App einen besseren Überblick über ihre schulischen Aktivitäten haben und diese besser planen können um somit Zuverlässiger in der Schule werden. Die App soll durch einen Einladungslink für Schüler zugänglich sein.
+Das Ziel ist, dass Schüler durch die App einen besseren Überblick über ihre schulischen Aktivitäten haben und diese besser planen können um somit Zuverlässiger in der Schule werden. Die App soll durch einen Einladungslink für Schüler zugänglich sein
