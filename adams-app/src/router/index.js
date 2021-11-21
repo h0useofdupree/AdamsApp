@@ -10,7 +10,8 @@ import Plan from '@/views/Plan.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/home'
+    // TODO: redirect to login if not logged in
   },
   {
     path: '/login',

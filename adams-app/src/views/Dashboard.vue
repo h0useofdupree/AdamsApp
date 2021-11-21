@@ -1,5 +1,7 @@
 <template>
-  <h1>Dashboard</h1>
+  <ion-app>
+    <h1>Hello</h1>
+  </ion-app>
 </template>
 
 <script>
