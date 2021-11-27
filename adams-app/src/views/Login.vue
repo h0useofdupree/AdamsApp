@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ion-page>
     <form>
       <ion-item>
         <ion-label position="floating">Username</ion-label>
@@ -17,19 +17,34 @@
       </ion-item>
       <ion-button @click="login" expand="block" size="medium">Login</ion-button>
     </form>
-  </div>
+    <ion-loading
+      :is-open="$store.getters.authStatus === 'loading'"
+      message="Bitte warten..."
+    >
+    </ion-loading>
+  </ion-page>
 </template>
 
 
 <script>
-import { IonItem, IonLabel, IonInput } from "@ionic/vue";
+import {
+  IonPage,
+  IonItem,
+  IonLabel,
+  IonInput,
+  IonButton,
+  IonLoading,
+} from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
+    IonPage,
     IonItem,
     IonLabel,
     IonInput,
+    IonButton,
+    IonLoading,
   },
   data() {
     return {
@@ -41,7 +56,14 @@ export default defineComponent({
   },
   methods: {
     login() {
-      console.log(this.user);
+      this.$store.dispatch("login", this.user).then(() => {
+        console.log(this.$store.getters.authStatus);
+        if (this.$store.getters.authStatus == "success") {
+          this.$router.push({ path: "/home" });
+        } else if (this.$store.getters.authStatus == "error") {
+          console.log("error");
+        }
+      });
     },
   },
 });
