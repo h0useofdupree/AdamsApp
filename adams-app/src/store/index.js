@@ -29,6 +29,7 @@ export default createStore({
           .then(response => {
             if (response.data.status === 'success') {
               const user = response.data
+              localStorage.setItem('user', JSON.stringify(user.user))
               commit('auth_success', user)
             } else if (response.data.status === 'error') {
               commit('auth_error')
