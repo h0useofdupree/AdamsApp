@@ -2,8 +2,8 @@
   <ion-menu side="start" content-id="main-content">
     <ion-header>
       <ion-toolbar translucent>
-        <ion-title> AdamsApp</ion-title>
-        // TODO: Click on the app name / logo to go to the home page
+        <ion-title href="/dashboard"> AdamsApp</ion-title>
+        <!-- TODO: Click on the app name / logo to go to the home page -->
       </ion-toolbar>
     </ion-header>
     <ion-content>

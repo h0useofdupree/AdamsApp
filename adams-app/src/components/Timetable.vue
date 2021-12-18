@@ -1,8 +1,8 @@
 <template>
-  <ion-grid>
+  <ion-grid class="container">
     <!-- Check, ob 'subjects' Objekt einträge hat, ansonsten wird das 
       Grid nicht gerendert (führt sonst zu Fehlern) -->
-    <ion-row>
+    <ion-row class="days">
       <!-- Reihe für die Wochentage -->
       <ion-col></ion-col>
       <ion-col>Mo</ion-col>
@@ -15,7 +15,7 @@
     <ion-row v-for="tp in timeperiods" :key="tp.display">
       <!-- 10 Reihen, da wir nicht mehr als 10 Stunden pro Tag haben. -->
       <ion-col class="timeperiods" v-html="tp.display"></ion-col>
-      <!-- In timeperiods sind die Uhrzeiten eingetragen, v-for iteriert durch -->
+      <!-- In 'timeperiods' sind die Uhrzeiten eingetragen, v-for iteriert durch -->
       <ion-col
         class="subject_columns"
         v-for="date_val in dates"
@@ -27,9 +27,10 @@
               table_data.startTime === tp.startTime &&
               table_data.date === date_val
             "
+            class="subjc"
           >
             <span
-              id="subject-item"
+              class="subject-item"
               v-for="subject in table_data.su"
               :key="subject.id"
               >{{
@@ -141,17 +142,88 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.container{
+  font-size: 9pt;
+}
 .timeperiods {
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
+
+  min-width: 45px;
+  max-width: 55px;
+
+  background-color: var(--ion-color-primary);
+
+  padding: 5px;
+  margin-top: 5px;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
-#subject-item {
-  margin: 0;
-  padding: 0;
-  border: 1px white solid;
+.timeperiods:nth-child(even){
+  background-color: blue;
 }
+.subject-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9pt;
+
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+
+  border-radius: 5px;
+  background-color: none;
+}
+/* Make every odd indexed column be a different color for contrast */
+.subject_columns:nth-child(odd) {
+  background-color: var(--color-main-3);
+}
+/* Make every even indexed column be a different color for contrast */
+.subject_columns:nth-child(even) {
+  background-color: var(--color-main-2);
+}
+/* Make first columns borders align to 'timeperiods' */
+.subject_columns:nth-child(2){
+  background-color: red;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+}
+.subject-item:hover{
+  transition: 10ms;
+  background-color: blue;
+}
+/*  */
 .subject_columns {
   display: flex;
   flex-direction: row;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  min-width: 3em;
+  max-width: 4;
+
+  border-radius: 10px;
+}
+.dayEven{
+  background-color: var(--ion-color-light);
+}
+.dayOdd{
+  background-color: var(--ion-color-medium);
+}
+.days{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: var(--color-main-3);
+}
+.days ion-col{
+  text-align: center;
+}
+.days ion-col:nth-child(even){
+  background-color: blue;
 }
 </style>
