@@ -43,6 +43,7 @@
         </ion-buttons>
         <ion-title class="ion-text-center ion-padding-bottom">{{ $route.name }}</ion-title>
       </ion-toolbar>
+      <ion-item-divider  color="none" class="divider"></ion-item-divider>
     </ion-header>
     <ion-content>
       <ion-router-outlet />
@@ -102,5 +103,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+.divider{
+  min-height: 2px !important;
+  background: linear-gradient(to right,var(--ion-color-primary) 0%,var(--ion-color-primary) 60%, var(--ion-card-background) 100%);
+}
 </style>

@@ -168,12 +168,12 @@ export default defineComponent({
 
   padding: 5px;
   margin-top: 5px;
+  
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-.timeperiods:nth-child(even){
-  background-color: blue;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
 }
 .subject-item {
   display: flex;
@@ -192,53 +192,46 @@ export default defineComponent({
 }
 /* Make every odd indexed column be a different color for contrast */
 .subject_columns:nth-child(odd) {
-  background-color: var(--color-main-3);
+  background-color: var(--ion-color-step-200);
 }
 /* Make every even indexed column be a different color for contrast */
 .subject_columns:nth-child(even) {
-  background-color: var(--color-main-2);
+  background-color: var(--ion-color-step-100);
 }
-/* Make first columns borders align to 'timeperiods' */
-.subject_columns:nth-child(2){
+/* Make current day color the column differently */
+/* .subject_columns:nth-child(3){
   background-color: red;
-  border-top-left-radius: none;
-  border-bottom-left-radius: none;
-}
-.subject-columns > .subject-item:nth-child(even){
-  background-color: black;
-}
-.subject-item:hover{
+} */
+
+/* On Hover: Basically 'On-Touch' on phones. */
+/* .subject-item:hover{
   transition: 10ms;
   background-color: blue;
-}
+} */
+
 /*  */
 .subject_columns {
   display: flex;
   flex-direction: row;
 
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-left: 5px;
 
   min-width: 3em;
   max-width: 4;
 
-  border-radius: 10px;
-}
-.dayEven{
-  background-color: var(--ion-color-light);
-}
-.dayOdd{
-  background-color: var(--ion-color-medium);
+  border-radius: 5px;
 }
 .days{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-color: var(--color-main-3);
+  background-color: var(--ion-color-step-50);
 }
 .days ion-col{
   text-align: center;
+  color: var(--ion-color-secondary);
 }
-.days ion-col:nth-child(even){
-  background-color: blue;
+.days ion-col:nth-child(2n+0){
+  background-color: var(--ion-color-step-100);
 }
 </style>
