@@ -202,7 +202,6 @@ export default defineComponent({
 /* .subject_columns:nth-child(3){
   background-color: red;
 } */
-
 /* On Hover: Basically 'On-Touch' on phones. */
 /* .subject-item:hover{
   transition: 10ms;

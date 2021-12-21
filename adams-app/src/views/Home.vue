@@ -15,17 +15,13 @@
         <ion-icon :icon="calendar" slot="start"></ion-icon>
           <ion-label>Stundenplan</ion-label>
         </ion-item>
-        <ion-item href="/termine" detail="false">
+        <ion-item href="/appointments" detail="false">
         <ion-icon :icon="albums" slot="start"></ion-icon>
           <ion-label>Termine</ion-label>
         </ion-item>
-        <ion-item href="/hausaufgaben" detail="false"> 
+        <ion-item href="/homework" detail="false"> 
         <ion-icon :icon="document" slot="start"></ion-icon>
           <ion-label>Hausaufgaben</ion-label> 
-        </ion-item>
-        <ion-item href="/grades" detail="false">
-        <ion-icon :icon="school" slot="start"></ion-icon>
-          <ion-label>Noten</ion-label>
         </ion-item>
         <ion-item href="/settings" detail="false">
         <ion-icon :icon="settings" slot="start"></ion-icon>
@@ -107,6 +103,6 @@ export default defineComponent({
 <style scoped>
 .divider{
   min-height: 2px !important;
-  background: linear-gradient(to right,var(--ion-color-primary) 0%,var(--ion-color-primary) 60%, var(--ion-card-background) 100%);
+  background: linear-gradient(to right,var(--ion-card-background) 0%,var(--ion-color-primary) 30%,var(--ion-color-primary) 70%, var(--ion-card-background) 100%);
 }
 </style>

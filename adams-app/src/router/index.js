@@ -5,7 +5,10 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 
 import Dashboard from '@/views/Dashboard.vue'
+
 import Plan from '@/views/Plan.vue'
+
+import Appointments from '@/views/Appointments.vue';
 
 import Settings from '@/views/Settings.vue'
 const routes = [
@@ -34,8 +37,14 @@ const routes = [
       },
       {
         path: '/settings',
+        name: 'Einstellungen',
         component: Settings,
       },
+      {
+        path: '/appointments',
+        name: 'Termine',
+        component: Appointments,
+      }
     ]
   },
 ]
