@@ -209,7 +209,6 @@ export default defineComponent({
   background-color: blue;
 } */
 
-/*  */
 .subject_columns {
   display: flex;
   flex-direction: row;
