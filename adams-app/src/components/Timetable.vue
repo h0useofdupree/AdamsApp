@@ -103,7 +103,7 @@ export default defineComponent({
         },
       ],
 
-      dates: [20211213, 20211214, 20211215, 20211216, 20211217],
+      dates: [20211220, 20211221, 20211222, 20211223, 20211224],
     };
   },
   created() {
@@ -136,6 +136,18 @@ export default defineComponent({
       } else {
         return new Date(year, month - 1, day);
       }
+    },
+    getDaysArray(start, end) {
+      for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
+          arr.push(new Date(dt));
+      }
+    return arr;
+    },
+    getMonday() {
+      var d = new Date();
+      var day = d.getDay()
+      var diff = d.getDate() - day + (day == 0 ? -6:1);
+      return this.convertDate(new Date(d.setDate(diff)));
     },
   },
 });
@@ -191,6 +203,9 @@ export default defineComponent({
   background-color: red;
   border-top-left-radius: none;
   border-bottom-left-radius: none;
+}
+.subject-columns > .subject-item:nth-child(even){
+  background-color: black;
 }
 .subject-item:hover{
   transition: 10ms;

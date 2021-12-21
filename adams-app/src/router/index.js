@@ -7,11 +7,11 @@ import Login from '@/views/Login.vue'
 import Dashboard from '@/views/Dashboard.vue'
 import Plan from '@/views/Plan.vue'
 
+import Settings from '@/views/Settings.vue'
 const routes = [
   {
     path: '/',
     redirect: '/home'
-    // TODO: redirect to login if not logged in
   },
   {
     path: '/login',
@@ -31,10 +31,13 @@ const routes = [
         path: '/plan',
         name: 'Plan',
         component: Plan
-      }
+      },
+      {
+        path: '/settings',
+        component: Settings,
+      },
     ]
   },
-
 ]
 
 const router = createRouter({
