@@ -1,5 +1,5 @@
 <template>
-    <div  class="ion-margin-vertical trans-back" style="padding-bottom: 5rem" >
+    <div  class="ion-margin-vertical" style="padding-bottom: 5rem" >
     <ion-card class="ion-padding">
     <ion-card-header>
       <ion-card-title>Stundenplan</ion-card-title> 
